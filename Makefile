@@ -16,13 +16,11 @@ options:
 	@echo "LDFLAGS = ${LDFLAGS}"
 	@echo "CC      = ${CC}"
 
-dwmblocks: dwmblocks.c blocks.def.h blocks.h
+dwmblocks: dwmblocks.c blocks.def.h
 	${CC} -o dwmblocks dwmblocks.c ${CFLAGS} ${LDFLAGS}
 
-blocks.h:
-	cp blocks.def.h $@
-
 clean:
+	git clean -xf
 	rm -f *.o *.gch dwmblocks
 
 install: dwmblocks

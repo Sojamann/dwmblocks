@@ -1,4 +1,7 @@
 # dwmblocks
+
+git remote add upstream git@github.com:torrinfail/dwmblocks.git
+
 Modular status bar for dwm written in c.
 # usage
 To use dwmblocks first run 'make' and then install it with 'sudo make install'.

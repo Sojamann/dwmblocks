@@ -2,8 +2,9 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 	{"Mem:", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",	30,		0},
+	{"Vol:", "pactl get-sink-volume @DEFAULT_SINK@ | grep -oP '\\d+\\%' | uniq", 1, 0},
 
-	{"", "date '+%b %d (%a) %I:%M%p'",					5,		0},
+	{"", "date '+%d.%m.%y %T'",					5,		0},
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
